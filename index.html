@@ -8,8 +8,9 @@
         body { font-family: -apple-system, sans-serif; background: #f0f4f8; padding: 20px; text-align: center; }
         .chat-box { background: white; border-radius: 15px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); max-width: 400px; margin: auto; }
         header { background: #004a99; color: white; padding: 20px; border-radius: 15px 15px 0 0; margin: -20px -20px 20px -20px; }
-        .message { background: #eef7ff; padding: 10px; border-radius: 10px; margin-bottom: 10px; text-align: left; font-size: 0.9rem; }
-        .btn { display: block; width: 100%; background: #004a99; color: white; border: none; padding: 12px; margin: 5px 0; border-radius: 8px; cursor: pointer; font-weight: bold; }
+        .message { background: #eef7ff; padding: 15px; border-radius: 10px; margin-bottom: 10px; text-align: left; font-size: 0.95rem; min-height: 80px; }
+        .btn { display: block; width: 100%; background: #004a99; color: white; border: none; padding: 12px; margin: 8px 0; border-radius: 8px; cursor: pointer; font-weight: bold; text-decoration: none; font-size: 0.9rem; }
+        .book-btn { background: #c5a059; margin-top: 15px; color: #fff; }
         footer { font-size: 0.7rem; color: #888; margin-top: 20px; }
     </style>
 </head>
@@ -22,32 +23,42 @@
     </header>
 
     <div id="chat-output" class="message">
-        Hello! I'm Tony. I've been a host here in San Antonio since 1970. How can I help you today?
+        Hello! I'm Tony. How can I help you enjoy Ibiza today?
     </div>
 
-    <button class="btn" onclick="ask('breakfast')">When is breakfast?</button>
-    <button class="btn" onclick="ask('pool')">Where is the pool?</button>
-    <button class="btn" onclick="ask('boat')">Tell me about the boat!</button>
-    <button class="btn" onclick="ask('sunset')">Best sunset spot?</button>
+    <div id="action-area">
+        <button class="btn" onclick="ask('breakfast')">When is breakfast?</button>
+        <button class="btn" onclick="ask('pool')">Where is the pool?</button>
+        <button class="btn" onclick="ask('boat')">Tell me about the boat!</button>
+        <button class="btn" onclick="ask('sunset')">Best sunset spot?</button>
+    </div>
 </div>
 
 <script>
     function ask(topic) {
         let output = document.getElementById('chat-output');
+        let actionArea = document.getElementById('action-area');
+        
         if(topic === 'breakfast') {
-            output.innerHTML = "<b>Tony:</b> On vacation, you set the schedule! Our buffet is served until <b>11:30 AM or 12:00 PM</b>.";
+            output.innerHTML = "<b>Tony:</b> On vacation, you set the schedule! Our buffet is served until <b>11:30 AM or 12:00 PM</b> [4, 5].";
         } else if(topic === 'pool') {
-            output.innerHTML = "<b>Tony:</b> We are a cozy city hotel, so we use the pool at our neighbor <b>Hostal Tarba</b>, just 100m away.";
+            output.innerHTML = "<b>Tony:</b> We are a cozy city hotel, so we use the pool at our neighbor <b>Hostal Tarba</b>, just 100m away [6, 7].";
         } else if(topic === 'boat') {
-            output.innerHTML = "<b>Tony:</b> Join us on the <b>Bon Oratge</b>, our 12m private yacht, for a sunset trip to Es Vedrà!";
+            output.innerHTML = "<b>Tony:</b> Our 12m yacht, the <b>Bon Oratge</b>, goes to the northern cliffs and Es Vedrà [4, 8]. Ready to sail?";
+            // This adds the functional booking buttons
+            actionArea.innerHTML = `
+                <a href="mailto:info@hotelmarfil.com?subject=Yacht Booking Inquiry&body=Hi Tony, I would like to book a trip on the Bon Oratge..." class="btn book-btn">Email to Book Now</a>
+                <a href="https://wa.me/34650220034?text=Hi Tony, I'm interested in the boat trip!" class="btn" style="background:#25D366">WhatsApp Tony</a>
+                <button class="btn" onclick="location.reload()" style="background:#888">Back to Questions</button>
+            `;
         } else if(topic === 'sunset') {
-            output.innerHTML = "<b>Tony:</b> The Sunset Strip is 10 mins away. Buy a drink at a shop and sit on the <b>promenade rocks</b>—it's the local way!";
+            output.innerHTML = "<b>Tony:</b> The Sunset Strip is 10 mins away. Buy a drink at a shop and sit on the <b>promenade rocks</b>—it's the local way [9]!";
         }
     }
 </script>
 
 <footer>
-    Hotel Marfil, San Antonio, Ibiza
+    Hotel Marfil, San Antonio, Ibiza [1]
 </footer>
 
 </body>
