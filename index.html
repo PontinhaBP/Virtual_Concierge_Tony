@@ -10,7 +10,7 @@
         header { background: #004a99; color: white; padding: 20px; border-radius: 15px 15px 0 0; margin: -20px -20px 20px -20px; }
         .message { background: #eef7ff; padding: 15px; border-radius: 10px; margin-bottom: 10px; text-align: left; font-size: 0.95rem; min-height: 80px; }
         .btn { display: block; width: 100%; background: #004a99; color: white; border: none; padding: 12px; margin: 8px 0; border-radius: 8px; cursor: pointer; font-weight: bold; text-decoration: none; font-size: 0.9rem; }
-        .book-btn { background: #c5a059; margin-top: 15px; color: #fff; }
+        .pool-highlight { color: #004a99; font-weight: bold; }
         footer { font-size: 0.7rem; color: #888; margin-top: 20px; }
     </style>
 </head>
@@ -23,7 +23,7 @@
     </header>
 
     <div id="chat-output" class="message">
-        Hello! I'm Tony. Our family-run hotel has been hosting visitors to San Antonio for over 50 years. How can I help you enjoy your stay?
+        Hello! I'm Tony. Since 1970, we've been helping guests discover the real Ibiza. How can I help you today?
     </div>
 
     <div id="action-area">
@@ -37,21 +37,14 @@
 <script>
     function ask(topic) {
         let output = document.getElementById('chat-output');
-        let actionArea = document.getElementById('action-area');
-        
         if(topic === 'breakfast') {
             output.innerHTML = "<b>Tony:</b> On vacation, you set the schedule! Our buffet is served until <b>11:30 AM or 12:00 PM</b>.";
         } else if(topic === 'pool') {
-            output.innerHTML = "<b>Tony:</b> We are a cozy city hotel, so we use the pool at our neighbor <b>Hostal Tarba</b>, just 100 meters away.";
+            output.innerHTML = "<b>Tony:</b> We recommend the pool just 100m away. It is now part of the <b>azuline chain</b>. They offer a <span class='pool-highlight'>Day Pass for €15</span>, which you get back as credit to spend on drinks or food at their bar!";
         } else if(topic === 'boat') {
-            output.innerHTML = "<b>Tony:</b> Join us on the <b>Bon Oratge</b>, our private 12-meter yacht, for a sunset trip to Es Vedrà! Ready to book?";
-            actionArea.innerHTML = `
-                <a href="mailto:info@hotelmarfil.com?subject=Yacht Booking Inquiry&body=Hi Tony, I would like to book a trip on the Bon Oratge..." class="btn book-btn">Email to Book Now</a>
-                <a href="https://wa.me/34650220034?text=Hi Tony, I'm interested in the boat trip!" class="btn" style="background:#25D366">WhatsApp Tony</a>
-                <button class="btn" onclick="location.reload()" style="background:#888">Back to Questions</button>
-            `;
+            output.innerHTML = "<b>Tony:</b> Join us on the <b>Bon Oratge</b>, our private 12m yacht, for a sunset trip to Es Vedrà! Email us at <b>info@hotelmarfil.com</b> to book.";
         } else if(topic === 'sunset') {
-            output.innerHTML = "<b>Tony:</b> The Sunset Strip is 10 minutes away. Buy a drink at a shop and sit on the <b>promenade rocks</b>—it's the local way to enjoy the view for free!";
+            output.innerHTML = "<b>Tony:</b> The Sunset Strip is 10 mins away. <b>Pro Tip:</b> Buy a drink at a shop and sit on the promenade rocks—it's the best free seat in Ibiza!";
         }
     }
 </script>
