@@ -23,7 +23,7 @@
     </header>
 
     <div id="chat-output" class="message">
-        Hello! I'm Tony. How can I help you enjoy Ibiza today?
+        Hello! I'm Tony. Our family-run hotel has been hosting visitors to San Antonio for over 50 years. How can I help you enjoy your stay?
     </div>
 
     <div id="action-area">
@@ -40,27 +40,25 @@
         let actionArea = document.getElementById('action-area');
         
         if(topic === 'breakfast') {
-            output.innerHTML = "<b>Tony:</b> On vacation, you set the schedule! Our buffet is served until <b>11:30 AM or 12:00 PM</b> [4, 5].";
+            output.innerHTML = "<b>Tony:</b> On vacation, you set the schedule! Our buffet is served until <b>11:30 AM or 12:00 PM</b>.";
         } else if(topic === 'pool') {
-            output.innerHTML = "<b>Tony:</b> We are a cozy city hotel, so we use the pool at our neighbor <b>Hostal Tarba</b>, just 100m away [6, 7].";
+            output.innerHTML = "<b>Tony:</b> We are a cozy city hotel, so we use the pool at our neighbor <b>Hostal Tarba</b>, just 100 meters away.";
         } else if(topic === 'boat') {
-            output.innerHTML = "<b>Tony:</b> Our 12m yacht, the <b>Bon Oratge</b>, goes to the northern cliffs and Es Vedrà [4, 8]. Ready to sail?";
-            // This adds the functional booking buttons
+            output.innerHTML = "<b>Tony:</b> Join us on the <b>Bon Oratge</b>, our private 12-meter yacht, for a sunset trip to Es Vedrà! Ready to book?";
             actionArea.innerHTML = `
                 <a href="mailto:info@hotelmarfil.com?subject=Yacht Booking Inquiry&body=Hi Tony, I would like to book a trip on the Bon Oratge..." class="btn book-btn">Email to Book Now</a>
                 <a href="https://wa.me/34650220034?text=Hi Tony, I'm interested in the boat trip!" class="btn" style="background:#25D366">WhatsApp Tony</a>
                 <button class="btn" onclick="location.reload()" style="background:#888">Back to Questions</button>
             `;
         } else if(topic === 'sunset') {
-            output.innerHTML = "<b>Tony:</b> The Sunset Strip is 10 mins away. Buy a drink at a shop and sit on the <b>promenade rocks</b>—it's the local way [9]!";
+            output.innerHTML = "<b>Tony:</b> The Sunset Strip is 10 minutes away. Buy a drink at a shop and sit on the <b>promenade rocks</b>—it's the local way to enjoy the view for free!";
         }
     }
 </script>
 
 <footer>
-    Hotel Marfil, San Antonio, Ibiza [1]
+    Hotel Marfil, San Antonio, Ibiza
 </footer>
 
 </body>
 </html>
-
