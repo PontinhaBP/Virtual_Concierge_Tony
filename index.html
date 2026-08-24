@@ -29,6 +29,7 @@
     <div id="action-area">
         <button class="btn" onclick="ask('breakfast')">When is breakfast?</button>
         <button class="btn" onclick="ask('pool')">Where is the pool?</button>
+        <button class="btn" onclick="ask('gym')">Is there a gym?</button>
         <button class="btn" onclick="ask('boat')">Tell me about the boat!</button>
         <button class="btn" onclick="ask('sunset')">Best sunset spot?</button>
         <button class="btn" onclick="ask('guides')" style="background: #28a745;">Discover Our Digital Guides</button>
@@ -44,7 +45,9 @@
         if(topic === 'breakfast') {
             output.innerHTML = "<b>Tony:</b> On vacation, you set the schedule! Our buffet is served until <b>11:30 AM or 12:00 PM</b>.";
         } else if(topic === 'pool') {
-            output.innerHTML = "<b>Tony:</b> We recommend the pool just 100 meters away. It is part of the <b>azuline chain</b>. They offer a <b>Day Pass for €15</b>, which you get back as credit to spend on drinks (like a €10 piña colada) or food at their bar! The cover charge is good for one day.";
+            output.innerHTML = "<b>Tony:</b> For a swim, our guests enjoy full, <b>free access</b> to the swimming pool and sun loungers at our neighbor <b>Hostal Tarba</b>, just 100 meters away! (Please note: snacks and drinks at their pool bar are paid separately).";
+        } else if(topic === 'gym') {
+            output.innerHTML = "<b>Tony:</b> Yes! Our private <b>on-site gym/fitness center</b> is located right here inside <b>Hotel Marfil</b> for all our guests to use.";
         } else if(topic === 'sunset') {
             output.innerHTML = "<b>Tony:</b> Walk 10 mins to the Sunset Strip. <b>Pro Tip:</b> Buy a drink at a shop and sit on the promenade rocks—it's the best free seat in Ibiza!";
         } else if(topic === 'boat') {
@@ -60,18 +63,18 @@
                 <a href="Why_Hotel_Marfil_is_Ibiza_s_Hidden_Gem.mp4" class="btn" style="background: #e0a800; color: #333;" target="_blank">Watch Welcome Video</a>
                 <a href="Hotel_Marfil_Guest_Distance_Guide%202.png" class="btn" style="background: #17a2b8;" target="_blank">View Location & Pool Map</a>
                 <a href="Hotel_Marfil_Late_Breakfasts_and_Yacht_Sunsets.m4a" class="btn" style="background: #8e44ad;" target="_blank">Listen to Audio Guidebook</a>
-                <a href="Marfil_Digital_Concierge.pdf" class="btn" style="background: #1abc9c;" target="_blank">Read Guest Guide (PDF)</a>
-                <a href="The%20Digital%20Marfil%20Smile.pdf" class="btn" style="background: #34495e;" target="_blank">View Presentation (PDF)</a>
+                <a href="Marfil_Digital_Concierge.pdf" class="btn" style="background: #1180de;" target="_blank">Read Guest Guide (PDF)</a>
+                <a href="The%20Digital%20Marfil%20Smile.pdf" class="btn" style="background: #1abc9c;" target="_blank">View Presentation Pitch</a>
                 <button class="btn" onclick="location.reload()" style="background:#888">Back to Questions</button>
             `;
         } else if(topic === 'sources') {
             output.innerHTML = "<b>Tony:</b> Here are the real local sources and guides we used to build this assistant. Tap any link to explore:";
             actionArea.innerHTML = `
+                <a href="Project%20Reference%20&%20Source%20Guide:%20Virtual%20Concierge%20Tony.docx" class="btn" style="background: #9b59b6;" target="_blank">Our Master Source Guide</a>
                 <a href="https://www.hotelmarfil.com/en" class="btn" style="background: #28a745;" target="_blank">Hotel Marfil Official Site</a>
                 <a href="https://www.ibiza-spotlight.com/magazine/2024/07/where-eat-and-around-san-antonio-town-ibiza-high-end-budget" class="btn" style="background: #17a2b8;" target="_blank">Ibiza Spotlight Eat Guide</a>
                 <a href="https://www.nomadotravel.app/en/places/san-antonio" class="btn" style="background: #e0a800; color: #333;" target="_blank">Nomado Sunset Strip Guide</a>
                 <a href="https://ibizahire.com/our-ibiza-guide-to-san-antonios-best-beaches/" class="btn" style="background: #fd7e14;" target="_blank">Ibiza Hire Beach Guide</a>
-                <a href="Project%20Reference%20%26%20Source%20Guide%3A%20Virtual%20Concierge%20Tony.docx" class="btn" style="background: #9b59b6;" target="_blank">Project Reference Guide (Word)</a>
                 <button class="btn" onclick="location.reload()" style="background:#888">Back to Questions</button>
             `;
         }
