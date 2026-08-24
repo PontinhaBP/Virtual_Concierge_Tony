@@ -19,7 +19,7 @@
 <div class="chat-box">
     <header>
         <h3>Tony - Virtual Concierge</h3>
-        <p style="font-size: 0.8rem;">"Hosting Smiles Since 1970"</p>
+        <p style="font-size: 0.8rem;">\"Hosting Smiles Since 1970\"</p>
     </header>
 
     <div id="chat-output" class="message">
@@ -53,29 +53,29 @@
         } else if(topic === 'boat') {
             output.innerHTML = "<b>Tony:</b> Join us on the <b>Bon Oratge</b>, our private 12m yacht, for a sunset trip to Es Vedrà! How would you like to book?";
             actionArea.innerHTML = `
-                <a href="mailto:info@hotelmarfil.com?subject=Yacht Booking Inquiry&body=Hi Tony, I would like to book a trip on the Bon Oratge..." class="btn book-btn">Email to Book Now</a>
-                <a href="https://wa.me/34650220034?text=Hi Tony, I'm interested in the boat trip!" class="btn" style="background:#25D366" target="_blank">WhatsApp Tony</a>
-                <button class="btn" onclick="location.reload()" style="background:#888">Back to Questions</button>
+                <a href=\"mailto:info@hotelmarfil.com?subject=Yacht Booking Inquiry&body=Hi Tony, I would like to book a trip on the Bon Oratge...\" class=\"btn book-btn\">Email to Book Now</a>
+                <a href=\"https://wa.me/34650220034?text=Hi Tony, I'm interested in the boat trip!\" class=\"btn\" style=\"background:#25D366\" target=\"_blank\">WhatsApp Tony</a>
+                <button class=\"btn\" onclick=\"location.reload()\" style=\"background:#888\">Back to Questions</button>
             `;
         } else if(topic === 'guides') {
             output.innerHTML = "<b>Tony:</b> I've prepared some special materials to help you find the authentic Ibiza. Which would you like?";
             actionArea.innerHTML = `
-                <a href="Why_Hotel_Marfil_is_Ibiza_s_Hidden_Gem.mp4" class="btn" style="background: #e0a800; color: #333;" target="_blank">Watch Welcome Video</a>
-                <a href="Hotel_Marfil_Guest_Distance_Guide%202.png" class="btn" style="background: #17a2b8;" target="_blank">View Location & Pool Map</a>
-                <a href="Hotel_Marfil_Late_Breakfasts_and_Yacht_Sunsets.m4a" class="btn" style="background: #8e44ad;" target="_blank">Listen to Audio Guidebook</a>
-                <a href="Marfil_Digital_Concierge.pdf" class="btn" style="background: #1180de;" target="_blank">Read Guest Guide (PDF)</a>
-                <a href="The%20Digital%20Marfil%20Smile.pdf" class="btn" style="background: #1abc9c;" target="_blank">View Presentation Pitch</a>
-                <button class="btn" onclick="location.reload()" style="background:#888">Back to Questions</button>
+                <a href=\"Hotel_Marfil_Concierge%202.mp4\" class=\"btn\" style=\"background: #e0a800; color: #333;\" target=\"_blank\">Watch Welcome Video</a>
+                <a href=\"Hotel_Marfil_Guest_Distance_Guide%202.png\" class=\"btn\" style=\"background: #17a2b8;\" target=\"_blank\">View Location & Pool Map</a>
+                <a href=\"Sunset_Stays_at_Hotel_Marfil_and_Ibiza_s_Anti-Party_Vibe.m4a\" class=\"btn\" style=\"background: #8e44ad;\" target=\"_blank\">Listen to Audio Guidebook</a>
+                <a href=\"Digital%20Guest%20Guide:%20Hotel%20Marfil%20San%20Antonio.docx\" class=\"btn\" style=\"background: #1180de;\" target=\"_blank\">Read Guest Guide (Word)</a>
+                <a href=\"The_Digital_Marfil_Smile%203.pdf\" class=\"btn\" style=\"background: #1abc9c;\" target=\"_blank\">View Presentation Pitch</a>
+                <button class=\"btn\" onclick=\"location.reload()\" style=\"background:#888\">Back to Questions</button>
             `;
         } else if(topic === 'sources') {
             output.innerHTML = "<b>Tony:</b> Here are the real local sources and guides we used to build this assistant. Tap any link to explore:";
             actionArea.innerHTML = `
-                <a href="Project%20Reference%20&%20Source%20Guide:%20Virtual%20Concierge%20Tony.docx" class="btn" style="background: #9b59b6;" target="_blank">Our Master Source Guide</a>
-                <a href="https://www.hotelmarfil.com/en" class="btn" style="background: #28a745;" target="_blank">Hotel Marfil Official Site</a>
-                <a href="https://www.ibiza-spotlight.com/magazine/2024/07/where-eat-and-around-san-antonio-town-ibiza-high-end-budget" class="btn" style="background: #17a2b8;" target="_blank">Ibiza Spotlight Eat Guide</a>
-                <a href="https://www.nomadotravel.app/en/places/san-antonio" class="btn" style="background: #e0a800; color: #333;" target="_blank">Nomado Sunset Strip Guide</a>
-                <a href="https://ibizahire.com/our-ibiza-guide-to-san-antonios-best-beaches/" class="btn" style="background: #fd7e14;" target="_blank">Ibiza Hire Beach Guide</a>
-                <button class="btn" onclick="location.reload()" style="background:#888">Back to Questions</button>
+                <a href=\"Project%20Reference%20&%20Source%20Guide:%20Virtual%20Concierge%20Project.docx\" class=\"btn\" style=\"background: #9b59b6;\" target=\"_blank\">Our Master Source Guide</a>
+                <a href=\"https://www.hotelmarfil.com/en\" class=\"btn\" style=\"background: #28a745;\" target=\"_blank\">Hotel Marfil Official Site</a>
+                <a href=\"https://www.ibiza-spotlight.com/magazine/2024/07/where-eat-and-around-san-antonio-town-ibiza-high-end-budget\" class=\"btn\" style=\"background: #17a2b8;\" target=\"_blank\">Ibiza Spotlight Eat Guide</a>
+                <a href=\"https://www.nomadotravel.app/en/places/san-antonio\" class=\"btn\" style=\"background: #e0a800; color: #333;\" target=\"_blank\">Nomado Sunset Strip Guide</a>
+                <a href=\"https://ibizahire.com/our-ibiza-guide-to-san-antonios-best-beaches/\" class=\"btn\" style=\"background: #fd7e14;\" target=\"_blank\">Ibiza Hire Beach Guide</a>
+                <button class=\"btn\" onclick=\"location.reload()\" style=\"background:#888\">Back to Questions</button>
             `;
         }
     }
